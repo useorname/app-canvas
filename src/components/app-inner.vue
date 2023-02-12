@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-
-defineProps<{ msg: string }>();
-
-const count = ref(0);
 </script>
 
 <template>
-  <div class="app-inner">text</div>
+  <div class="app-inner">
+    <app-sidebar />
+    <app-workspace />
+  </div>
 </template>
 
 <style scoped>
@@ -16,8 +14,12 @@ const count = ref(0);
   top: 0;
   left: 0;
 
+  display: grid;
   width: 100%;
   height: 100%;
+  grid-template-columns: 240px 1fr;
+  align-content: stretch;
+  justify-content: stretch;
   text-align: left;
 }
 </style>
